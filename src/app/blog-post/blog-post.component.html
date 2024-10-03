@@ -1,0 +1,77 @@
+<app-header></app-header>
+
+
+
+<section class="blog-posts grid-system">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="all-blog-posts">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="blog-post">
+                <div class="blog-thumb">
+                  <img src="{{headerService.uiData().thumbnail}}" style="width: 770px;height: 540px;object-fit: cover;" alt="">
+                </div>
+                <div class="down-content">
+                  <span>Viajes</span>
+                  <a href="post-details.html"><h4>{{headerService.uiData().title}}</h4></a>
+                  <ul class="post-info">
+                    <li><a href="#">{{headerService.uiData().author}}</a></li>
+                    <li><a href="#">{{headerService.uiData().publicationDate}}</a></li>
+                 
+                  </ul>
+
+                  <main [innerHTML]="content"></main>
+
+
+                  <div class="post-options">
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="post-tags">
+                          <li><i class="fa fa-tags"></i></li>
+                          <li><a href="#">Viajes</a>,</li>
+                          <li><a href="#">Naturaleza</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="post-share">
+                          <li><i class="fa fa-share-alt"></i></li>
+                          <li><a href="#">Facebook</a>,</li>
+                          <li><a href="#"> Twitter</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+
+            
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="sidebar">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="sidebar-item search">
+                <form id="search_form" name="gs" method="GET" action="#">
+                  <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
+                </form>
+              </div>
+            </div>
+            <app-recentposts></app-recentposts>
+
+
+            
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
